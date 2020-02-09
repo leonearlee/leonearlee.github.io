@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Haolog</title>
+  <title>Hexo中插入本地图片 | Haolog</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Haolog">
+  <meta name="description" content="Hexo中插入本地图片 | Haolog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="格式问题很是每一个学生在书写毕业论文的拦路虎，各大高校的毕业论文一般都会有latex模板，如网上有很多介绍清华大学的毕业论文模板，LaTeX Thesis Template for Tsinghua University。为了毕业论文做准备，当然我要选择国科大的毕业论文模板，github上同样有中国科学院大学学位论文 LaTeX 模板 LaTeX Thesis Template for the U">
 <meta property="og:type" content="article">
@@ -66,7 +66,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -261,12 +261,54 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Hexo中插入本地图片" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#About-this-blog"><span class="toc-text">About this blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">Hexo中插入本地图片</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-02-06 22:29:42'>2020-02-06 22:24</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo配置文件的设置"><span class="toc-text">Hexo配置文件的设置</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -279,20 +321,38 @@
     }
 </style>
 </div>
-            <h1 id="About-this-blog"><a href="#About-this-blog" class="headerlink" title="About this blog"></a>About this blog</h1><p><strong>Haolog</strong> 是Hao Li的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次。</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a>。</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
-</ul>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hexo配置文件的设置"><a href="#Hexo配置文件的设置" class="headerlink" title="Hexo配置文件的设置"></a>Hexo配置文件的设置</h1><p>找到Hexo的配置文件_config.yml里post_asset_folder，并将其置为true</p>
+<pre><code class="bash">post_asset_folder: true</code></pre>
+<p>这个功能实际上是Hexo官方文档中提到的资源文件夹功能，它的作用在于当你使用</p>
+<pre><code class="bash">hexo new</code></pre>
+<p>生成一篇新文章时，会在\source_posts目录下生成一个 文章名.md 文件外，附带生成一个与 文章名 同名的文件夹，可以用它来存放这篇文章的所有资源，比如图片，附件等</p>
+<p>链接本博客其他文章<br><a href="/2016/09/30/Git命令大全/">链接</a><br>实现页面内部跳转<br>先定义要跳转的锚点<br><span id="jump">跳转到的地方</span>  //注: id是您随意取的,当然必须是唯一的<br>定义链接</p>
+<p><a href="#jump">点击跳转</a><br>Hexo添加音乐<br>hexo添加音乐</p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 本文章为原创，版权归作者Hao Li所有，文章转载请先取得作者的同意，非常欢迎转发文章链接！严禁以任何方式挪用本文内容，用于以盈利为目的各种活动。 </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Hexo中插入本地图片</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="Hao Li">Hao Li</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-02-06, 22:24:43</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-06, 22:29:42</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/06/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/" title="Hexo中插入本地图片">https://leonearlee.github.io/2020/02/06/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
     <div id="comments"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
@@ -312,6 +372,13 @@
         gitalk.render('comments')
     })
 </script>
+
+
+
+
+    
+
+
 
 
     </div>
